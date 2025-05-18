@@ -11,7 +11,9 @@ export default function App() {
     setVotes({ ...votes, [type]: votes[type] + 1 });
   };
   console.log(votes);
-  const resetVotes = () => {};
+  const resetVotes = () => {
+    setVotes({ good: 0, neutral: 0, bad: 0 });
+  };
   const showReset = () => setCanReset(!canReset);
 
   return (
